@@ -120,10 +120,10 @@ For warping the Image I created a function called warper() in the notebook. This
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 560, 480      | 320, 0        | 
-| 245, 720      | 320, 720      |
-| 1165, 720     | 960, 720      |
-| 760, 480      | 960, 0        |
+| 593, 450      | 200, 0        | 
+| 700, 450      | 1080, 0       |
+| 1200, 700     | 1080, 720     |
+| 200, 700      | 200, 720      |
 
 
 def warper(img, src, dst):
@@ -262,7 +262,7 @@ Many more are the pipeline video mentioned in the Advance_Lane.ipynb notebook af
 #### Problems faced during the project
 There were a lot of challenges in the project. I have enlisted some of them with the solutions I found for them.
 
-I found L color gradient (of HLS) threshold play an important role for differentiating the lanes specially on shadow region or from parallel dark crack lines. I tried Magnitude gradient and directional threshold but wasn't that usefull. I think there are still a better way than my thresholded binary image to detect the lane even more appropriately, which is required to make it work for the 3rd video harder_challenge_video. Also I could have better tune the Challenge_video by tuning the sobel x threshold or introduce a y threshold.
+I found L color gradient (of HLS) threshold play an important role for differentiating the lanes specially on shadow region or from parallel dark crack lines. I tried Magnitude gradient and directional threshold but wasn't that usefull. I think there are still a better way than my thresholded binary image to detect the lane even more appropriately, which is required to make it work for the 3rd video harder_challenge_video. With my previous perspective transform values(i.e when my lane length was around 10-15m) I was able to draw lane lines on challenge_video.mp4 but with new perspective transform values(i.e. able to draw lane lines til 30m) my draw_on_image is not working on challenge_video.mp4. Further onwards i will work on the challenge_video.mp4 and harder_Challenge_video.mp4 if time permits. 
 
 #### PipeLine(video)
 
@@ -272,4 +272,4 @@ Please find the link to the output video:
 
 Project video: https://github.com/SanyamAgarwalRobotics/AdvanceLaneLines/blob/master/project_video_Output.mp4
 
-Challenge video: https://github.com/SanyamAgarwalRobotics/AdvanceLaneLines/blob/master/challenge_video_Output.mp4
+Challenge video: https://github.com/SanyamAgarwalRobotics/AdvanceLaneLines/blob/master/challenge_video_Output.mp4 (working with old perspective transform values. I commented the code in AdvanceLane.ipynb for it)
